@@ -2,8 +2,10 @@
 import React, { useInsertionEffect, useState } from 'react';
 import Card from './HopeCard';
 import User from './HopeText';
+import './HopeList.css';
 
-const UsersList = (props) => {
+
+const ClassList = (props) => {
 
  
 
@@ -24,4 +26,4 @@ const UsersList = (props) => {
   )
 }
 
-export default UsersList;
+export default ClassList;
