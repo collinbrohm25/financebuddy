@@ -58,6 +58,7 @@ const AddUser = (props) => {
     console.log(userData);
     props.onSaveUserData(userData);
     
+    
     setUserInput({
       enteredName: '',
       enteredHour: '',
