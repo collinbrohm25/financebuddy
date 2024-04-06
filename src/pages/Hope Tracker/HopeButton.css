@@ -7,9 +7,12 @@
     cursor: pointer;
     position: relative;
     left: 77px;
+    border-radius: 5px;
   }
   
-  .button:hover,
+  .button:hover{
+    color: white;
+  }
   .button:active {
     background: #B21E32;
     border-color: #B21E32;

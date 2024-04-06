@@ -5,8 +5,7 @@ import Button from './HopeButton';
 import './HopeInput.css';
 
 
-
-const AddUser = (props) => {
+const AddClass = (props) => {
    
   const [userInput, setUserInput] = useState({
      enteredName: '',
@@ -15,12 +14,8 @@ const AddUser = (props) => {
      enteredGrade:'',
 
   });
+
   
-  function handleRemoveClass(index){
-
-    setUserInput(userInput.filter((_, i) => i !== index));
-
-  }
 
   const nameChangeHandler = (event) => {
     setUserInput((prevState) => {
@@ -61,7 +56,6 @@ const AddUser = (props) => {
     console.log(userData);
     props.onSaveUserData(userData);
     
-    
     setUserInput({
       enteredName: '',
       enteredHour: '',
@@ -71,41 +65,44 @@ const AddUser = (props) => {
   };
 
   return (
+    <div>
     <Card className="input">
       <form onSubmit={submitHandler}>
-        <label>Class Name</label>
+        <label className="name">Class Name</label>
         <input
           id="name"
           type="text"
           value={userInput.enteredName} required
           onChange={nameChangeHandler}
+          maxLength= "18"
         />
-        <label>Class Hours</label>
+        <label className ="hour">Class Hours</label>
         <input
           id="hour"
           type="number"
           value={userInput.enteredHour} 
           onChange={hourChangeHandler}
         />
-        <label>Image for Class</label>
+        <label className = "img">Image for Class</label>
          <input
           id="img"
           type="text"
           value={userInput.enteredImg}
           onChange={imgChangeHandler}
         />
-        <label>Grade</label>
+        <label className='grade'>Grade</label>
          <input
           id="grade"
           type="text"
           value={userInput.enteredGrade}
           onChange={gradeChangeHandler}
+          maxLength= "1"
         />
-        <Button type="submit">Add User</Button>
-       
+        <Button type="submit">Add Class</Button>
       </form>
     </Card>
+    </div>
   );
 };
 
-export default AddUser;
+export default AddClass;

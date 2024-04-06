@@ -1,19 +1,23 @@
 import React from 'react';
 import Card from './HopeCard';
+import './HopeText.css';
 
-const User = (props) => {
+const Text = (props) => {
     return (    
         <Card className= 'users'>
+        <div className='user2'>
         <li key={props.id} className="user-item">
         <img src={props.img} className="user-img" alt={props.name} />
         <div className="user-info">
-            <h2>{props.name}</h2>
-            <h3>{props.hour} Class Hours</h3>
-            <h3 className="user-content">Grade: {props.grade}</h3>
+            <h2 className="top">{props.name}</h2>
+            <h3 classNAme="middle">Class Hours: {props.hour} </h3>
+            <h3 className="bottom">Grade: {props.grade}</h3>
         </div>
+
         </li>
+        </div>
         </Card>
     );
 }
 
-export default User;
+export default Text;

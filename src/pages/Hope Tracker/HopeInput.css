@@ -1,19 +1,47 @@
+form{
+    padding-top: 50px;
+    display: grid;
+    justify-content: left;
+    background-color: rgb(0, 0, 0);
+}
+div.card.input{
+    margin-left: 0px;
+}
 
+
+input{
+    position:relative;
+    left: 77px;
+    border-radius: 5px;
+}
 
 
 .input {
     margin: 2rem auto;
     padding: 1rem;
-    width: 90%;
-    max-width: 40rem;
+    max-width: 60rem;
+    position: relative;
+   
+ 
   }
   
   label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    color: rgb(33, 33, 37);
+   display: block;
+   font-weight: bold;
+   margin-bottom: 0.5rem;
+   color: rgba(255, 255, 255, 0.75);   
+   display: grid;
+   justify-content: center;
+   position: relative;
+   left: 80px;
+   background: #B21E32;
+   border-color: #B21E32 ;
+   margin-left: -5px;
+   border-radius: 5px;
+
+   
   }
+
   
   .input input {
     font: inherit;
@@ -22,11 +50,8 @@
     border: 1px solid #ccc;
     padding: 0.15rem;
     margin-bottom: 0.5rem;
-  
+    
+
   }
   
-  .input input:focus {
-    outline: none;
-    border-color: #4f005f;
-  }
-  
+
