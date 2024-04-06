@@ -6,6 +6,8 @@ import Hdr from './HopeHdr';
 import UsersLists from './HopeList';
 import TotalHoursDisplay from './TotalHourDisplay';
 
+
+
 function Home() {
   const [totalHours, setTotalHours] = useState(0);
   const DUMMY_USERS = [
