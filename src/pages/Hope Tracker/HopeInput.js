@@ -5,6 +5,7 @@ import Button from './HopeButton';
 import './HopeInput.css';
 
 
+
 const AddUser = (props) => {
    
   const [userInput, setUserInput] = useState({
@@ -14,7 +15,7 @@ const AddUser = (props) => {
      enteredGrade:'',
 
   });
-
+  
   function handleRemoveClass(index){
 
     setUserInput(userInput.filter((_, i) => i !== index));
@@ -47,7 +48,7 @@ const AddUser = (props) => {
 
   const submitHandler = (event) => {
     event.preventDefault();
-
+    
     const userData = {
       name: userInput.enteredName,
       hour: userInput.enteredHour,
@@ -55,8 +56,11 @@ const AddUser = (props) => {
       grade: userInput.enteredGrade
     };
 
+    
+   
     console.log(userData);
     props.onSaveUserData(userData);
+    
     
     setUserInput({
       enteredName: '',
@@ -98,6 +102,7 @@ const AddUser = (props) => {
           onChange={gradeChangeHandler}
         />
         <Button type="submit">Add User</Button>
+       
       </form>
     </Card>
   );

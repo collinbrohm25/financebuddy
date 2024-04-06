@@ -1,7 +1,7 @@
 import Navbar from "./Navbar"
 import Cash from "./pages/CashFlow"
 import Budget from "./pages/Budget"
-import Hope from "./pages/HopeTracker"
+import Hope from "./pages/Hope Tracker/HopeTracker"
 import Home from "./pages/Home"
 import { BrowserRouter as Router, Route, Switch, Redirect,Routes } from 'react-router-dom';
 
