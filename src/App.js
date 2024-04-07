@@ -4,6 +4,8 @@ import Budget from "./pages/Budget"
 import Hope from "./pages/Hope Tracker/HopeTracker"
 import Home from "./pages/Home"
 import Log from "./pages/LogIn"
+import LogIn from "./pages/LogIn"
+import LoggedIn from "./pages/LoggedIn"
 import { BrowserRouter as Router, Route, Switch, Redirect,Routes } from 'react-router-dom';
 
 function App() {
@@ -18,6 +20,8 @@ function App() {
           <Route path="/budget" element={<Budget />} />
           <Route path="/cashflow" element={<Cash />} />
           <Route path="/hopetracker" element={<Hope />} />
+          <Route path="/login" element={<LogIn />} />
+          <Route path="/loggedin" element={<LoggedIn />} />
           </Routes>
       </div>
     </>

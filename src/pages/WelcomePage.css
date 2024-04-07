@@ -1,0 +1,38 @@
+body {
+    background-color: #000;
+}
+
+#main {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: space-around;
+}
+
+#leftHalf {
+    width: 45%;
+}
+
+#dogIMG {
+    width: 90%;
+    height: 90%;
+    margin: auto;
+}
+
+#rightHalf {
+    width: 45%;
+    color: #fff;
+    /* use better font */
+}
+
+#rightHalf p {
+    font-size: 20px;
+}
+
+#logInButton {
+    background-color: #ba0c2f;
+    color: white;
+    border: solid;
+    border-color: #ba0c2f;
+    border-width: 2px 16px 4px 16px;
+}
