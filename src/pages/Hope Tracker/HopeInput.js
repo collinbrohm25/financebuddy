@@ -67,7 +67,7 @@ const AddClass = (props) => {
   return (
     <div>
     <Card className="input">
-      <form onSubmit={submitHandler}>
+      <form onSubmit={submitHandler} className='HopeInput'>
         <label className="name">Class Name</label>
         <input
           id="name"
