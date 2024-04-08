@@ -1,0 +1,27 @@
+#icon {
+    width: 50%;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+    margin: 5% 5%;
+    background-color: #fff;
+}
+
+
+#main {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: space-around;
+}
+
+#main p {
+    color: #fff;
+    font-size: 32pt;
+    margin: auto;
+}
+
+.halves {
+    width: 50%;
+}
