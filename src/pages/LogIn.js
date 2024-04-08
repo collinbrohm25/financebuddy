@@ -12,7 +12,7 @@ export default function LogIn() {
     
     
     return (
-        <form onSubmit={handleChange}>
+        <form onSubmit={handleChange} className="LogIn">
             <label for="user">Username:</label>
             <input id="user" name="user" value=""></input>
             <br />

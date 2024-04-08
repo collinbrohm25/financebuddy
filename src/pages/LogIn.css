@@ -1,4 +1,4 @@
-form {
+.LogIn {
     color: black;
     border: solid;
     border-color: #ba0c2f;
@@ -9,10 +9,10 @@ form {
     margin: auto;
 }
 
-form label {
+.LogIn label {
     margin: 4px;
 }
 
-form input {
+.LogIn input {
     margin: 4px;
 }
