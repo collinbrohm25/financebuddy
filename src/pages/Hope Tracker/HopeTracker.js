@@ -3,10 +3,11 @@ import React, { useInsertionEffect, useState } from 'react';
 import Text from './HopeText';
 import AddClass from './HopeInput';
 import ClassLists from './HopeList';
+import TotalHoursDisplay from './TotalHourDisplay';
 import './HopeTracker.css';
 
 function Hope() {
-   
+  const [totalHours, setTotalHours] = useState(0);
   const DUMMY_USERS = [
 {
     name: 'Systems',
@@ -42,6 +43,7 @@ function Hope() {
   return (
     <div className='Hope'>
       <AddClass onSaveUserData ={addClassHandler}/>
+      <TotalHoursDisplay totalHours={totalHours}/>
       <ClassLists items = {users}/>
     </div>
   );
