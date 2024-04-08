@@ -7,7 +7,8 @@ import TotalHoursDisplay from './TotalHourDisplay';
 import './HopeTracker.css';
 
 function Hope() {
-  const [totalHours, setTotalHours] = useState(0);
+  const [totalHours, setTotalHours] = useState(12);
+  
   const DUMMY_USERS = [
 {
     name: 'Systems',
@@ -31,13 +32,13 @@ function Hope() {
 ]
 
   const [users, setUsers] = useState(DUMMY_USERS);
-
+  
   const addClassHandler = user => {
     setUsers((prevUsers) => {
        return [user, ...prevUsers];
     });
     const hoursToAdd = Number(user.hour); // Convert hour to a number if it's a string
-        setTotalHours((prevTotalHours) => prevTotalHours + hoursToAdd);
+      setTotalHours((prevTotalHours) => prevTotalHours + hoursToAdd);
   };
 
   return (
