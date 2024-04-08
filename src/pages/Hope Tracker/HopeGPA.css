@@ -1,0 +1,18 @@
+.GPA{
+    display: flex;
+    margin-left: -5px;
+    border: 5px;
+    color: red;
+}
+
+.gpa {
+    justify-content: center;
+
+}
+
+.class2 {
+    border-radius: 5px;
+    padding: 10px;
+    border: 5px;
+    margin-left: -5px;
+}

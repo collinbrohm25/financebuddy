@@ -5,6 +5,7 @@ import AddClass from './HopeInput';
 import ClassLists from './HopeList';
 import TotalHoursDisplay from './TotalHourDisplay';
 import './HopeTracker.css';
+import HopeGPA from './HopeGPA';
 
 function Hope() {
   const [totalHours, setTotalHours] = useState(12);
@@ -41,11 +42,17 @@ function Hope() {
       setTotalHours((prevTotalHours) => prevTotalHours + hoursToAdd);
   };
 
+  const hours = users.map(user => Number(user.hour))  ;
+  const grades = users.map(user => user.grade);
+
+
   return (
     <div className='Hope'>
       <AddClass onSaveUserData ={addClassHandler}/>
       <TotalHoursDisplay totalHours={totalHours}/>
+      <HopeGPA hours={hours} grades={grades}/>
       <ClassLists items = {users}/>
+      
     </div>
   );
 }

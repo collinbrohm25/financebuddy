@@ -1,5 +1,6 @@
 import React from "react";
-
+import Card from "./HopeCard";
+import './HopeGPA.css'
 
 function HopeGPA(props) {
     const hours = props.hours;
@@ -18,11 +19,12 @@ function HopeGPA(props) {
     const gpa = totalGradePoints / totalCreditHours;
 
     return (
-        <div>
+        <div className='GPA'>
             
-            <p>Total Credit Hours: {totalCreditHours}</p>
-            <p>Total Grade Points: {totalGradePoints}</p>
-            <p>GPA: {gpa.toFixed(2)}</p>
+            <Card className= 'gpa'>
+                <label className = 'class2'>GPA: {gpa.toFixed(2)}</label>
+                
+            </Card>
         </div>
     );
 }
