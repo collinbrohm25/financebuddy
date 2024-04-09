@@ -2,6 +2,10 @@ body {
     background-color: #000;
 }
 
+.example{
+    color: white;
+}
+
 #main {
     display: flex;
     flex-direction: row; 
