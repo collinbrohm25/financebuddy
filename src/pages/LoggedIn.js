@@ -2,6 +2,7 @@
     Pass props with proper username from form in final implementation
 */
 import "./LoggedIn.css";
+import { Link } from "react-router-dom";
 
 const username = "default_user"; // switch from const if there are issues
 const profileLink = '/images/financebuddy_logo.png'; /* change to external links, remember to use promises */
@@ -16,6 +17,7 @@ export default function LoggedIn() {
             <p>
                 Welcome {username} to your Finance Buddy.
             </p>
+            <Link to="/home" id="logOutButton">Log Out</Link>
         </div>
     </div>
    )
