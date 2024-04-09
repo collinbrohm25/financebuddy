@@ -25,3 +25,11 @@
 .halves {
     width: 50%;
 }
+
+#logOutButton {
+    background-color: #ba0c2f;
+    color: white;
+    border: solid;
+    border-color: #ba0c2f;
+    border-width: 2px 16px 4px 16px;
+}
