@@ -9,7 +9,14 @@ import HopeGPA from './HopeGPA';
 
 function Hope() {
   const [totalHours, setTotalHours] = useState(12);
-  
+  const mongoose = require('mongoose')
+
+  const GradeSchema = new mongoose.Schema({
+    title: {
+      type: String,
+      required: true
+    }
+  });
   const DUMMY_USERS = [
 {
     name: 'Systems',
@@ -40,6 +47,7 @@ function Hope() {
     });
     const hoursToAdd = Number(user.hour); // Convert hour to a number if it's a string
       setTotalHours((prevTotalHours) => prevTotalHours + hoursToAdd);
+    
   };
 
   const hours = users.map(user => Number(user.hour))  ;

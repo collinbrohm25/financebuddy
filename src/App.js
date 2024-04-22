@@ -6,6 +6,7 @@ import Home from "./pages/Home"
 import Log from "./pages/LogIn"
 import LogIn from "./pages/LogIn"
 import LoggedIn from "./pages/LoggedIn"
+import React from "react"
 import { BrowserRouter as Router, Route, Switch, Redirect,Routes } from 'react-router-dom';
 
 function App() {

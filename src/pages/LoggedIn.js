@@ -1,6 +1,7 @@
 /* Temporary 
     Pass props with proper username from form in final implementation
 */
+import React from "react";
 import "./LoggedIn.css";
 import { Link } from "react-router-dom";
 
