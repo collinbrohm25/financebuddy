@@ -46,7 +46,6 @@ input{
   .input input {
     font: inherit;
     display: block;
-    width: 10%;
     border: 1px solid #ccc;
     padding: 0.15rem;
     margin-bottom: 0.5rem;
