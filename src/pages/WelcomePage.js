@@ -54,10 +54,8 @@ export default function WelcomePage() {
             </div>
         </div>
        <div>
-       <h1 className='example'>Examples List of Items components </h1>
-
        </div>
-      <ClassLists items = {users}/>
+
       </>          
 
     );
