@@ -1,3 +1,14 @@
+
+
+.card.users {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  top: 10px;
+  left: 20px;
+  margin: 30px;
+}
+
 .user2{
   border: 1px solid hsl(0, 0%, 100%);
   border-radius: 10px;
@@ -5,16 +16,14 @@
   padding: 20px;
   margin: 10px;
   text-align: center;
-  max-width: 250px;
   display: inline-block;
+  max-width: 250px;
   background-color: #B21E32 ;
   color: rgba(255, 255, 255, 0.75);
    max-height: 340px;
    min-height: 340px;
    max-width: 250px;
-   min-width: 250px;
-
-  
+   min-width: 250px;  
 }
 
 .user2:hover{
@@ -45,3 +54,24 @@
   margin:0;
 }
 
+.delete{
+  font-size: 12px;
+  font: inherit;
+  border-radius: 1em;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.75);
+  cursor: pointer;
+  color: rgba(0, 0, 0);
+  position: relative;
+  bottom: 5px;
+  
+}
+
+.delete:hover{
+  cursor: pointer;
+  transform: scale(1.03);
+  transform: all 1s ease;
+  background-color: white;
+  
+}

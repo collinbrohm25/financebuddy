@@ -18,8 +18,6 @@ function App() {
           <Route exact path= "/login" element={<Log />} />
           <Route exact path="/" element={<Home />} />
           <Route exact path="/home" element={<Home />} />
-          <Route path="/budget" element={<Budget />} />
-          <Route path="/cashflow" element={<Cash />} />
           <Route path="/hopetracker" element={<Hope />} />
           <Route path="/login" element={<LogIn />} />
           <Route path="/loggedin" element={<LoggedIn />} />

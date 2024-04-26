@@ -16,7 +16,6 @@ const AddClass = (props) => {
   });
 
   
-
   const nameChangeHandler = (event) => {
     setUserInput((prevState) => {
        return {...prevState, enteredName: event.target.value}
@@ -40,6 +39,8 @@ const AddClass = (props) => {
        return {...prevState, enteredGrade: event.target.value}
     });
   }
+
+
 
   const submitHandler = (event) => {
     event.preventDefault();
@@ -96,7 +97,7 @@ const AddClass = (props) => {
           type="text"
           value={userInput.enteredGrade}
           onChange={gradeChangeHandler}
-          maxLength= "1"
+          maxLength= "2"
         />
         <Button type="submit">Add Class</Button>
       </form>

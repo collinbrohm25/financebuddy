@@ -7,8 +7,6 @@ export default function Navbar() {
       <ul>
         <CustomLink to="/home" className="link">Home</CustomLink>
         <CustomLink to="/hopetracker" className="link">Hope Tracker</CustomLink>
-        <CustomLink to="/cashflow" className="link">Cash Flow</CustomLink>
-        <CustomLink to="/budget" className="link">Budget</CustomLink>
       </ul>
     </nav>
   )
