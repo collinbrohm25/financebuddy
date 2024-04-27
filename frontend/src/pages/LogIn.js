@@ -6,14 +6,14 @@ import { useNavigate } from "react-router-dom";
 
 export default function LogIn() {
     const navigate = useNavigate();
-    const { UserData, setUserData } = useContext(UserContext);
+    const { userData, setUserData } = useContext(UserContext);
 
     // Redirect if user is already logged in
     useEffect(() => {
-        if (UserData.token) {
+        if (userData.token) {
             navigate("/loggedin");
         };
-    }, [UserData, navigate]);
+    }, [userData, navigate]);
 
     const [formData, setFormData] = useState({
         email:'',

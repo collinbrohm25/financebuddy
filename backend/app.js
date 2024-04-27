@@ -12,7 +12,7 @@ app.use(cors({origin: true, credentials: true }));
 app.use(express.json({etended: false }));
 app.get('/', (req, res) => res.send('Hello world!'));
 
-const conn_str = 'mongodb+srv://crb00552:Crb2003!@cluster0.ukjtzht.mongodb.net/';
+const conn_str = 'mongodb+srv://crb00552:Crb2003!@cluster0.flj4dd8.mongodb.net/';
 mongoose.set('strictQuery', false);
 mongoose.connect(conn_str).then(() => {
     app.listen(port, () => console.log(`Server running on port ${port}`));
