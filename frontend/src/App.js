@@ -8,10 +8,12 @@ import LogIn from "./pages/LogIn"
 import LoggedIn from "./pages/LoggedIn"
 import React from "react"
 import { BrowserRouter as Router, Route, Switch, Redirect,Routes } from 'react-router-dom';
+import { UserProvider } from "./context/UserContext";
 
 function App() {
   return (
     <>
+    <UserProvider>
       <Navbar /> 
       <div className="container">
          <Routes>
@@ -23,6 +25,7 @@ function App() {
           <Route path="/loggedin" element={<LoggedIn />} />
           </Routes>
       </div>
+    </UserProvider>
     </>
   )
 }

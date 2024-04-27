@@ -6,8 +6,8 @@ const cors = require('cors');
 const items = require('./routes/api/items');
 const users = require('./routes/api/users');
 
-app.use('/api/users', users);
 app.use('/api/items', items);
+app.use('/api/users', users);
 app.use(cors({origin: true, credentials: true }));
 app.use(express.json({etended: false }));
 app.get('/', (req, res) => res.send('Hello world!'));
@@ -21,3 +21,5 @@ mongoose.connect(conn_str).then(() => {
 .catch(err => {
     console.log(`Error in DB Connection ${err}`);
 });
+
+// TRY USING REACT ROUTER INSTEAD IF THIS DOESN'T WORK
