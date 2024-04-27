@@ -68,7 +68,7 @@ function Hope() {
     <div className='Hope'>
       <AddClass onSaveUserData ={addClassHandler}/>
       <HopeGPA hours={hours} grades={grades}/>
-      <ClassLists items = {users} handleDelete ={deleteItem} className="margin"/>
+      <ClassLists items = {users} handleDelete ={deleteItem} />
     </div>
   );
 }

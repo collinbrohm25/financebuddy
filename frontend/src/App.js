@@ -7,6 +7,7 @@ import Log from "./pages/LogIn"
 import LogIn from "./pages/LogIn"
 import LoggedIn from "./pages/LoggedIn"
 import React from "react"
+import NotFound from "./Error"
 import { BrowserRouter as Router, Route, Switch, Redirect,Routes } from 'react-router-dom';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path="/hopetracker" element={<Hope />} />
           <Route path="/login" element={<LogIn />} />
           <Route path="/loggedin" element={<LoggedIn />} />
+          <Route path="*" element={<NotFound />} />
           </Routes>
       </div>
     </>
