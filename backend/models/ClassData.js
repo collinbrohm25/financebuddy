@@ -14,6 +14,10 @@ const ClassSchema = new mongoose.Schema({
     grade: {
         required: true,
         type: String
+    },
+    _id: {
+        required: true,
+        type: Number,
     }
 });
 

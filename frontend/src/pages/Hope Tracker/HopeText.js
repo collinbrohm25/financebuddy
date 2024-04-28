@@ -1,5 +1,5 @@
 "use client"
-import React, {useState } from 'react';
+import React, {useState, useEffect } from 'react';
 import Card from './HopeCard';
 import './HopeText.css';
 import Button from './HopeButton'
@@ -8,13 +8,22 @@ import Button from './HopeButton'
 const Text = (props) => {
 
     const [name, setName] = useState(props.name);
-     
+    const [users, setUsers] = useState([]);
     const [update, setUpdate] = useState({
        enteredUpdate: ''
 
     }
     )
-    
+    useEffect(() => {
+      axios.get('http://localhost:8085/api/classData')
+        .then(response => {
+          // Here you set the users state with the response from your API
+          setUsers(response.data);
+        })
+        .catch(error => {
+          console.log('Error fetching users:', error.message);
+        });
+    }, []);
     const updateChangeHandler = (event) => {
         setUpdate((prevState) => {
            return {...prevState,enteredUpdate: event.target.value}
@@ -38,7 +47,7 @@ const Text = (props) => {
     return (   
         <Card className= 'users' >
         <div className='user2' >
-        <li key={props.id} className="user-item">
+        <li key={props._id} className="user-item">
         <img src={props.img} className="user-img" alt={props.name} />
         <div className="user-info">
             <h2 className="top">{name}</h2>
