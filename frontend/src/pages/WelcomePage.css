@@ -17,7 +17,7 @@ body {
     width: 45%;
 }
 
-#dogIMG {
+#logoIMG {
     width: 90%;
     height: 90%;
     margin: auto;
@@ -26,7 +26,6 @@ body {
 #rightHalf {
     width: 45%;
     color: #fff;
-    /* use better font */
 }
 
 #rightHalf p {

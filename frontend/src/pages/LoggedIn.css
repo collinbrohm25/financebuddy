@@ -1,14 +1,3 @@
-#icon {
-    width: 50%;
-    aspect-ratio: 1 / 1;
-    border-radius: 50%;
-    color: #fff;
-    text-align: center;
-    margin: 5% 5%;
-    background-color: #fff;
-}
-
-
 #main {
     display: flex;
     flex-direction: row; 
@@ -38,4 +27,10 @@
 #logOutButton:hover {
     background-color: #9e0c29;
     border-color: #9e0c29;
+}
+
+#logoIMG {
+    width: 90%;
+    height: 90%;
+    margin: auto;
 }

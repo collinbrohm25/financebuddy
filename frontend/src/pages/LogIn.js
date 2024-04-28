@@ -2,7 +2,8 @@ import "./LogIn.css";
 import { useState, useContext, useEffect } from "react";
 import axios from 'axios';
 import UserContext from '../context/UserContext';
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
 
 export default function LogIn() {
     const navigate = useNavigate();
@@ -16,7 +17,7 @@ export default function LogIn() {
     }, [userData, navigate]);
 
     const [formData, setFormData] = useState({
-        email:'', // the username is referred to as email as a holdover from the example code
+        username:'', // the username is referred to as email as a holdover from the example code
         password:'',
     });
 
@@ -31,7 +32,7 @@ export default function LogIn() {
         e.preventDefault();
         try {
             // Send log in request to server
-            const response = await axios.post('http://localhost:8085/login', formData);
+            const response = await axios.post('http://localhost:8085/api/users/login', formData);
             setUserData({
                 token: response.data.token,
                 user: response.data.user,
@@ -41,26 +42,27 @@ export default function LogIn() {
             navigate("/loggedin");
         } catch (error) {
             console.error('Login failed:', error);
-            // HANDLE LOGIN ERROR HERE
-            // Print error component and clear login
-            // username and password did not match
+            alert("Login failed");
         }
     };
     
     
     return (
+        <div>
         <form onSubmit={handleLogin} onChange={handleChange} className="LogIn">
             <div className="formSections">
             <label for="user">Username:</label>
-            <input id="user" name="user"></input>
+            <input id="user" name="username"></input>
             </div>
             <div className="formSections">
             <label for="pass">Password:</label>
-            <input id="pass" name="pass"></input>
+            <input id="pass" name="password"></input>
             </div>
             <div className="formSections">
             <input type="submit" value="Submit"/>
             </div>
         </form>
+        <Link to="/signup" id="signUpLink">Sign Up</Link>
+        </div>
     );
 };
