@@ -54,9 +54,7 @@ function Hope() {
         })
         .catch(error => {
             console.error('Error:', error);
-            console.error('Error data:', error.response.data);
-        console.error('Error status:', error.response.status);
-        console.error('Error headers:', error.response.headers);
+            
         });
 };
 
