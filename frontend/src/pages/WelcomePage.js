@@ -49,10 +49,7 @@ export default function WelcomePage() {
             <div id="rightHalf">
                 <h1>Welcome to FinanceBuddy!</h1>
                 <p>
-                Your all purpose finance friend to help you with your CashFlow, budget, and more!
-                Need help tracking your scholarship eligibility? FinanceBuddy has an all intensive
-                tool to track your GPA, eligibility, and more! FinanceBuddy has everything a student
-                needs to no longer worry about tracking their finances.
+                Your all purpose website to track Georgia's Hope/Zell Miller scholarship. For all those what-if overthinking moments.
                 </p>
                 <button onClick={goToLogin} id="logInButton">Log In</button>
 
