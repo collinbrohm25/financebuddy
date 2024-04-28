@@ -40,7 +40,14 @@ const AddClass = (props) => {
     });
   }
 
+  const findClassHandler = (event) => {
 
+    const message = `Finding class deals with the name: ${userInput.enteredName}`;
+
+
+      
+    window.alert(message);
+  }
 
   const submitHandler = (event) => {
     event.preventDefault();
@@ -101,6 +108,7 @@ const AddClass = (props) => {
           maxLength= "2"
         />
         <Button type="submit">Add Class</Button>
+        <Button type="button" onClick={findClassHandler}>Find Class</Button>
       </form>
     </Card>
     </div>
