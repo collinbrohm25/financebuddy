@@ -49,7 +49,8 @@ const AddClass = (props) => {
       name: userInput.enteredName,
       hour: userInput.enteredHour,
       img: userInput.enteredImg,
-      grade: userInput.enteredGrade
+      grade: userInput.enteredGrade,
+      id: Math.random().toString()
     };
 
     
