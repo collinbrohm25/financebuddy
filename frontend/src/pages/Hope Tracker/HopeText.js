@@ -52,7 +52,7 @@ const Text = (props) => {
               type = "text"
               value = {update.enteredUpdate} required
               onChange={updateChangeHandler}
-              maxLength= "18"
+              maxLength= "10"
             />
             <Button onClick={clickHandler} type="submit">Update title</Button>
             </div>

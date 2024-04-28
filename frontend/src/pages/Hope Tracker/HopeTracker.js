@@ -19,7 +19,7 @@ function Hope() {
 
 } ,
 {
-    name: "Web Programming",
+    name: "Web Prog",
     hour: '4',
     grade: 'A',
     img: 'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png',

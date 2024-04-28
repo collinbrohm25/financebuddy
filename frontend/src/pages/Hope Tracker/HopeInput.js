@@ -75,7 +75,8 @@ const AddClass = (props) => {
           type="text"
           value={userInput.enteredName} required
           onChange={nameChangeHandler}
-          maxLength= "18"
+          minLength= "1"
+          maxLength= "10"
         />
         <label className ="hour">Class Hours</label>
         <input
