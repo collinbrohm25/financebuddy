@@ -16,7 +16,7 @@ export default function LogIn() {
     }, [userData, navigate]);
 
     const [formData, setFormData] = useState({
-        email:'',
+        email:'', // the username is referred to as email as a holdover from the example code
         password:'',
     });
 
@@ -45,20 +45,22 @@ export default function LogIn() {
             // Print error component and clear login
             // username and password did not match
         }
-
-        navigate("/loggedin");
     };
     
     
     return (
         <form onSubmit={handleLogin} onChange={handleChange} className="LogIn">
+            <div className="formSections">
             <label for="user">Username:</label>
-            <input id="user" name="user" value=""></input>
-            <br />
+            <input id="user" name="user"></input>
+            </div>
+            <div className="formSections">
             <label for="pass">Password:</label>
-            <input id="pass" name="pass" value=""></input>
-            <br />
+            <input id="pass" name="pass"></input>
+            </div>
+            <div className="formSections">
             <input type="submit" value="Submit"/>
+            </div>
         </form>
     );
 };

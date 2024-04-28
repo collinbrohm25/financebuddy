@@ -38,5 +38,11 @@ body {
     color: white;
     border: solid;
     border-color: #ba0c2f;
-    border-width: 2px 16px 4px 16px;
+    border-width: 4px 16px 4px 16px;
+    border-radius: 10%;
+}
+
+#logInButton:hover {
+    background-color: #9e0c29;
+    border-color: #9e0c29;
 }

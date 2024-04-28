@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import React from 'react';
 import './WelcomePage.css';
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import ClassLists from "./Hope Tracker/HopeList"
 
 export default function WelcomePage() {
@@ -29,11 +29,16 @@ export default function WelcomePage() {
         ]
 
  const [users, setUsers] = useState(DUMMY_USERS);
-  
+    const navigate = useNavigate();
+
   const addClassHandler = user => {
     setUsers((prevUsers) => {
        return [user, ...prevUsers];
     })};
+
+    const goToLogin = () => {
+        navigate("/login");
+    }
 
     return (
         <>
@@ -49,7 +54,7 @@ export default function WelcomePage() {
                 tool to track your GPA, eligibility, and more! FinanceBuddy has everything a student
                 needs to no longer worry about tracking their finances.
                 </p>
-                <Link to="/LogIn" id="logInButton">Log In</Link>
+                <button onClick={goToLogin} id="logInButton">Log In</button>
 
             </div>
         </div>
