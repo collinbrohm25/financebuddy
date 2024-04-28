@@ -14,13 +14,14 @@ const ClassList = (props) => {
      <Card className = "users">
          {props.items.map((user,index) => (
             <User 
+               _id = {user._id}
                key = {user._id}
                name = {user.name}
                hour = {user.hour}
                img = {user.img}
                grade = {user.grade}
                handleDelete={() => props.handleDelete(index,user)}
-               clickHandler={() => props.clickHandler(user)}
+               //clickHandler={() => props.clickHandler(user)}
                upd = {user.upd}
             />
          ))}

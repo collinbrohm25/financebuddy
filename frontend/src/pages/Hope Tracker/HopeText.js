@@ -1,5 +1,6 @@
 "use client"
 import React, {useState, useEffect } from 'react';
+import axios from 'axios';
 import Card from './HopeCard';
 import './HopeText.css';
 import Button from './HopeButton'
@@ -32,6 +33,16 @@ const Text = (props) => {
 
   const clickHandler = () => {
     setName(yo);
+    let mongoID = String(props._id)
+    console.log(mongoID);
+    axios.put(`http://localhost:8085/api/classData/${mongoID}`,{name: yo})
+    .then (response => {
+      console.log('Class updated', response.data)
+    })
+    .catch(error => {
+      console.error('Error', error.message)
+    })
+
   };
  
     return (   
