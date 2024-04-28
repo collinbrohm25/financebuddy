@@ -14,16 +14,6 @@ const Text = (props) => {
 
     }
     )
-    useEffect(() => {
-      axios.get('http://localhost:8085/api/classData')
-        .then(response => {
-          // Here you set the users state with the response from your API
-          setUsers(response.data);
-        })
-        .catch(error => {
-          console.log('Error fetching users:', error.message);
-        });
-    }, []);
     const updateChangeHandler = (event) => {
         setUpdate((prevState) => {
            return {...prevState,enteredUpdate: event.target.value}
