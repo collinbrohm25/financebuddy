@@ -1,5 +1,5 @@
 "use client";
-import React, { useInsertionEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Card from './HopeCard';
 import User from './HopeText';
 import './HopeList.css';
@@ -20,6 +20,7 @@ const ClassList = (props) => {
                img = {user.img}
                grade = {user.grade}
                handleDelete={() => props.handleDelete(index)}
+               upd = {user.upd}
             />
          ))}
      </Card>

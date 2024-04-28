@@ -7,6 +7,19 @@
   top: 10px;
   left: 20px;
   margin: 30px;
+  margin-bottom: 60px;
+}
+
+.update{
+  visibility: hidden;
+}
+
+.visible{
+  visibility: visible;
+  position: relative;
+  right: 75px;
+  top: 5px;
+
 }
 
 .user2{
@@ -24,6 +37,7 @@
    min-height: 340px;
    max-width: 250px;
    min-width: 250px;  
+  
 }
 
 .user2:hover{
