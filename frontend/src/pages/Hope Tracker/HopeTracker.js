@@ -1,22 +1,14 @@
 "use client";
+import axios from 'axios'
 import React, {useState } from 'react';
-import Text from './HopeText';
 import AddClass from './HopeInput';
 import ClassLists from './HopeList';
-import TotalHoursDisplay from './TotalHourDisplay';
 import './HopeTracker.css';
 import HopeGPA from './HopeGPA';
 
+
 function Hope() {
   const [totalHours, setTotalHours] = useState(12);
-  const mongoose = require('mongoose')
-
-  const GradeSchema = new mongoose.Schema({
-    title: {
-      type: String,
-      required: true
-    }
-  });
   const DUMMY_USERS = [
 {
     name: 'Systems',
@@ -51,14 +43,23 @@ function Hope() {
    };
 
 
-  const addClassHandler = user => {
-    setUsers((prevUsers) => {
-       return [user, ...prevUsers];
-    });
-    const hoursToAdd = Number(user.hour); // Convert hour to a number if it's a string
-      setTotalHours((prevTotalHours) => prevTotalHours + hoursToAdd);
-    
-  };
+   const addClassHandler = user => {
+    setUsers(prevUsers => [user, ...prevUsers]);
+    const hoursToAdd = user.hour; 
+    setTotalHours(prevTotalHours => prevTotalHours + hoursToAdd);
+    console.log("user", user);
+    axios.post('http://localhost:8085/api/classData', user)  
+        .then(response => {
+            console.log('Success:', response.data);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            console.error('Error data:', error.response.data);
+        console.error('Error status:', error.response.status);
+        console.error('Error headers:', error.response.headers);
+        });
+};
+
 
   const hours = users.map(user => Number(user.hour))  ;
   const grades = users.map(user => user.grade);
