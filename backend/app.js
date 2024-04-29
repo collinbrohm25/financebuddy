@@ -31,5 +31,3 @@ mongoose.connect(conn_str).then(() => {
 .catch(err => {
     console.log(`Error in DB Connection ${err}`);
 });
-
-// TRY USING REACT ROUTER INSTEAD IF THIS DOESN'T WORK

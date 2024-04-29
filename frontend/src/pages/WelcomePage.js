@@ -44,7 +44,7 @@ export default function WelcomePage() {
         <>
         <div id="main">
             <div id="leftHalf">
-                <img id="dogIMG" src='/images/financebuddy_logo.png' alt="Dog" />
+                <img id="logoIMG" src='/images/financebuddy_logo.png' alt="Logo" />
             </div>
             <div id="rightHalf">
                 <h1>Welcome to FinanceBuddy!</h1>

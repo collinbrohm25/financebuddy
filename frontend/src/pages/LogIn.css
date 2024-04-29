@@ -18,3 +18,21 @@
     margin-bottom: 2%;
     margin-left: -25%;
 }
+
+#signUpLink {
+    color: blue;
+    border: solid;
+    border-color: #ba0c2f;
+    border-radius: 3px;
+    border-width: 6px;
+    background-color: white;
+    padding: 4px;
+}
+
+#signUpLink:visited {
+    color: blue
+}
+
+#signUpLink:hover {
+    color: lightblue;
+}

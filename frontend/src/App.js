@@ -6,6 +6,7 @@ import Home from "./pages/Home"
 import Log from "./pages/LogIn"
 import LogIn from "./pages/LogIn"
 import LoggedIn from "./pages/LoggedIn"
+import SignUp from "./pages/SignUp"
 import React from "react"
 import NotFound from "./Error"
 import { BrowserRouter as Router, Route, Switch, Redirect,Routes } from 'react-router-dom';
@@ -24,6 +25,7 @@ function App() {
           <Route path="/hopetracker" element={<Hope />} />
           <Route path="/login" element={<LogIn />} />
           <Route path="/loggedin" element={<LoggedIn />} />
+          <Route path="/signup" element={<SignUp />} />
           <Route path="*" element={<NotFound />} />
           </Routes>
       </div>
