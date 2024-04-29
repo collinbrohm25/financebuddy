@@ -20,11 +20,17 @@ router.get('/:id',  (req, res) => {
 });
 
 // GETS ALL ITEMS
-router.get('/', (req, res) => {
-    Item.find()
-    .then((items) => res.json(items))
-    .catch((err) => res.status(404).json({ noitemsfound: 'No Items found' }));
-});
+// RETRIEVES ITEMS BY NAME
+router.get('/name/:name', (req, res) => {
+    Item.findOne({ name: req.params.name })
+      .then((item) => {
+        if (!item) {
+          return res.status(404).json({ error: 'No item found with that name' });
+        }
+        res.json(item);
+      })
+      .catch((err) => res.status(400).json({ error: 'Error fetching item by name' }));
+  });
 
 // UPDATES ITEMS BY ID
 router.put('/:id', bodyParser.json(), (req, res) => {

@@ -41,7 +41,7 @@ const AddClass = (props) => {
   }
 
   const findClassHandler = (event) => {
-
+    event.preventDefault();
     const message = `Finding class deals with the name: ${userInput.enteredName}`;
 
 
