@@ -36,11 +36,11 @@ function Hope(props) {
 
   const [users, setUsers] = useState(DUMMY_USERS);
 
-   const deleteItem = (index,user) => {
+   const deleteItem = async(index,user) => {
       
       let mongoID = String(user._id)
       console.log(mongoID);
-      axios.delete(`http://localhost:8085/api/classData/${mongoID}`)
+      await axios.delete(`http://localhost:8085/api/classData/${mongoID}`)
           .then (response => {
             console.log('Class deleted', response.data)
           })
@@ -52,14 +52,14 @@ function Hope(props) {
    };
 
 
-   const addClassHandler = user => {
+   const addClassHandler = async(user) => {
     setUsers(prevUsers => [user, ...prevUsers]);
     const hoursToAdd = user.hour; 
     setTotalHours(prevTotalHours => prevTotalHours + hoursToAdd);
-    axios.post('http://localhost:8085/api/classData/', user)
+     await axios.post('http://localhost:8085/api/classData/', user)
     .then((response) => {})
         .then(response => {
-            console.log('Success:', response.data);
+            console.log('Success:', response);
         })
         .catch(error => {
             console.error('Error:', error);

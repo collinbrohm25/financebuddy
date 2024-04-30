@@ -1,6 +1,4 @@
 import Navbar from "./Navbar"
-import Cash from "./pages/CashFlow"
-import Budget from "./pages/Budget"
 import Hope from "./pages/Hope Tracker/HopeTracker"
 import Home from "./pages/Home"
 import Log from "./pages/LogIn"

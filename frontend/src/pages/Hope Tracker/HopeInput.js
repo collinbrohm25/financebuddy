@@ -40,7 +40,7 @@ const AddClass = (props) => {
     });
   }
 
-  const findClassHandler = (event) => {
+  const findClassHandler = async(event) => {
     event.preventDefault();
     
     let searchClass = userInput.enteredName.trim();
@@ -52,7 +52,7 @@ const AddClass = (props) => {
     }
    
 
-   axios.get(`http://localhost:8085/api/classData/${searchClass}`)
+   await axios.get(`http://localhost:8085/api/classData/${searchClass}`)
    .then((response) => {
       console.log(response);
      let searchHours = response.data.hour;  

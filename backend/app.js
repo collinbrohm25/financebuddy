@@ -3,20 +3,16 @@ const app = express();
 const port = process.env.PORT || 8085;
 const mongoose = require('mongoose');
 const cors = require('cors');
-const items = require('./server/routes/api/items');
 const users = require('./server/routes/api/users');
 const classData = require('./server/routes/api/classData');
 
 
-app.use('/api/items', items);
 app.use(cors({origin: true, credentials: true }));
 app.use(express.json({extended: false }));
 app.use('/api/users', users);
 app.use(cors({origin: true, credentials: true }));
 app.use(express.json({etended: false }));
-app.use('/api/items', items);
 app.use('/api/classData',classData)
-//app.use(express.json());
 app.get('/', (req, res) => res.send('Hello world!'));
 const username = encodeURIComponent('crb00552');
 const password = encodeURIComponent('Crb2003!');

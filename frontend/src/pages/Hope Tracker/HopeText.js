@@ -31,11 +31,11 @@ const Text = (props) => {
     
   var yo = update.enteredUpdate
 
-  const clickHandler = () => {
+  const clickHandler = async() => {
     setName(yo);
     let mongoID = String(props._id)
     console.log(mongoID);
-    axios.put(`http://localhost:8085/api/classData/${mongoID}`,{name: yo})
+    await axios.put(`http://localhost:8085/api/classData/${mongoID}`,{name: yo})
     .then (response => {
       console.log('Class updated', response.data)
     })
