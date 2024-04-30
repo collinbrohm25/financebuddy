@@ -3,9 +3,9 @@ const app = express();
 const port = process.env.PORT || 8085;
 const mongoose = require('mongoose');
 const cors = require('cors');
-const items = require('./routes/api/items');
-const users = require('./routes/api/users');
-const classData = require('./routes/api/classData');
+const items = require('./server/routes/api/items');
+const users = require('./server/routes/api/users');
+const classData = require('./server/routes/api/classData');
 
 
 app.use('/api/items', items);
