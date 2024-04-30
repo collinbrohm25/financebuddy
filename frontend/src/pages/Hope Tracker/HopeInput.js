@@ -3,7 +3,7 @@ import React, { useInsertionEffect, useState } from 'react';
 import Card from './HopeCard';
 import Button from './HopeButton';
 import './HopeInput.css';
-
+import axios from 'axios';
 
 const AddClass = (props) => {
    
@@ -42,12 +42,34 @@ const AddClass = (props) => {
 
   const findClassHandler = (event) => {
     event.preventDefault();
-    const message = `Finding class deals with the name: ${userInput.enteredName}`;
+    
+    let searchClass = userInput.enteredName.trim();
+    
+    if (!searchClass) {// error checking
+      window.alert('Please enter a class name');
+      return;
 
+    }
+   
 
-      
+   axios.get(`http://localhost:8085/api/classData/${searchClass}`)
+   .then((response) => {
+      console.log(response);
+     let searchHours = response.data.hour;  
+     let searchGrade = response.data.grade;
+     console.log('hours', searchHours);
+     console.log('grade', searchGrade);
+
+    const message = `Finding details for class: ${searchClass}\n${searchClass}'s hours: ${searchHours}\n${searchClass}'s grade: ${searchGrade}`;
     window.alert(message);
-  }
+       
+    })
+    .catch (error => {
+      console.error('Error fetching class: ',error);
+      window.alert('Class not found or an error occurred');
+
+    });
+   }
 
   const submitHandler = (event) => {
     event.preventDefault();

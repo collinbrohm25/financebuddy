@@ -5,16 +5,42 @@ var bodyParser = require("body-parser")
 const Class = require('../../models/ClassData')
 router.use(bodyParser.json());
 
+
+
 router.get('/', (req,res) => {
+    console.log('getOne');
     Class.find() 
     .then((classData) => res.json({classData}))
     .catch((error) => res.status(404).json({error: error.message}))
 });
+
+router.get('/:className', (req, res) => {
+   console.log('getTwo');
+   const Name = req.params.className;
+
+   Class.findOne({name:Name})
+    .then(classData => {
+        if (classData) {
+            console.log('Found class', classData);
+            
+            res.json(classData);
+
+        } else {
+            console.log('Class not found');
+
+        }
+    })
+    .catch((error) => res.status(404).json({error:error.message}))
+  
+   
+});
 router.get('/:id', (req,res) => {
+    console.log('getysburg');
     Class.findById(req.params.id)
     .then((classData) => res.json(classData))
     .catch((error) => res.status(404).json({error: error.message})) 
-});
+}); 
+
 router.put('/:id', (req,res) => {
     Class.findByIdAndUpdate(req.params.id, req.body)
     .then((classData) => res.json({msg: 'Updated sucessfully'}))
