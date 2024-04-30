@@ -56,8 +56,8 @@ function Hope(props) {
     setUsers(prevUsers => [user, ...prevUsers]);
     const hoursToAdd = user.hour; 
     setTotalHours(prevTotalHours => prevTotalHours + hoursToAdd);
-    
-    axios.post('http://localhost:8085/api/classData/', user)  
+    axios.post('http://localhost:8085/api/classData/', user)
+    .then((response) => {})
         .then(response => {
             console.log('Success:', response.data);
         })
